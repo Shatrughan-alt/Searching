@@ -25,3 +25,27 @@ public class Main{
         lsearch(arr,k);
     }
 }
+
+//Linear Search without using break
+class Main
+{
+	public static int search(int arr[], int x)
+	{
+		for (int i=0;i<arr.length;i++)
+		{
+			if (arr[i] == x)
+				return i;
+		}
+		return -1;
+	}
+	public static void main(String args[])
+	{
+		int arr[] = { 10,20,30,40,50
+		int x = 10;
+		int n= search(arr, x);
+		if (n==1)
+			System.out.print("Element is not present in array");
+		else
+            System.out.print("Element is present at index "+result);
+    }
+}
