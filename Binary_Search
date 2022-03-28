@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+    public int bsearch(int arr[],int f,int l,int x){
+        if(f<=l) {
+            int mid = (f + l) / 2;
+            if (arr[mid]==x)
+                return mid;
+            else if(arr[mid]>x)
+                return bsearch(arr,f,l=mid-1,x);
+            else
+                return bsearch(arr,f=mid+1,l,x);
+        }
+      return -1;
+    }
+    public static void main(String args[]){
+        Main obj =new Main();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of array");
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        System.out.println("Enter the element in array");
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        int f=0;
+        int l=arr.length-1;
+        System.out.println("Enter the element you want to search");
+        int x=sc.nextInt();
+        System.out.println("The output is:\n"+obj.bsearch(arr,f,l,x));
+    }
+}
